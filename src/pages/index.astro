@@ -1,4 +1,7 @@
 ---
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/Footer.astro';
+import Hamburger from '../components/Hamburger.astro';
 ---
 
 <html lang="en">
@@ -10,10 +13,19 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		
+		<Navigation />
+		
+
 		<h1>Astro</h1>
 		<h2>My Astro Site</h2>
+		<Footer />
+		<script>
+			document.querySelector('.Hamburger').addEventListener('click', () => {
+			  document.querySelector('.nav-links').classList.toggle('expanded');
+			});
+			import "../scripts/menu.js"; 	
+		  </script>
+		  <Hamburger/>
 	</body>
 </html>
